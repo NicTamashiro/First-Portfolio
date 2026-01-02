@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-primaria: #3B4953;
+    --cor-secundaria: #ecefe6;
+    --cor-terciaria: #90AB8B;
+    --cor-hover: #5A7863;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0 0 15%;
+}
+
+.menu {
+    display: flex;
+    gap: 5rem;
+}
+
+.menu-link {
+   font-family: "Montserrat", sans-serif;
+   font-size: 1.5rem;
+   font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    position: relative;
+}
+.menu-link::after {
+   content: " ";
+   width: 0;
+   height: 0.125rem;
+   background-color: var(--cor-terciaria);
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   transition: 0.5s ease-in-out;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-family: "Krona One", sans-serif;;
+}
+
+p {
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+li {
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* #texto-home{
+    text-align: justify;
+} */
+
+.foto-perfil {
+ width: 40%;
+ border-radius: 1.56rem;
+ border: 0.31rem solid var(--cor-terciaria);
+ box-shadow: 0.625rem -0.625rem 0.625rem #667664;
+
+}
+
+
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.container {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.container-curriculo {
+    padding: 5% 15% 10% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.conteudo {
+    width: 38.438rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.conteudo-curriculo{
+    width: 38.438rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+
+.subtitle {
+    font-size: 1.5rem;
+    font-family: "Krona One", sans-serif;
+}
+
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+    text-align: center;
+    border: 0.125rem solid var(--cor-terciaria);
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1.344rem 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.link:hover {
+    background-color: var(--cor-hover);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+    text-align: center;
+    border: 0.125rem solid var(--cor-terciaria);
+    box-shadow: 0 0 2.18rem #667664;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1.344rem 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+
+.rodape {
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+}
+
+.logos {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+@media (max-width: 1200px) {
+
+    .foto-perfil{
+        width: 60%;
+    }
+    
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .container{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .container-curriculo{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .conteudo {
+        width: auto;
+        margin: 10px;
+    }
+    
+    .conteudo-curriculo {
+        width: auto;
+        margin: 0 1.57rem 1rem 1.57rem;
+    }
+}
+
+@media (max-width: 610px){
+
+    .foto-perfil{
+        width: 85%;
+    }
+    
+
+    .menu {
+        gap: 2rem;
+    }
+
+    .menu-link{
+        font-size: 1.1rem;
+    }
+
+    .link{
+        width: 80%;
+        height: 1rem;
+        font-size: 1.1rem;
+    
+    }
+
+    .link:hover{
+        width: 80%;
+        height: 1rem;
+        font-size: 1.2rem;
+        transition: 0.3s ease-in-out;
+    }
+
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    li {
+        font-size: 1.2rem;
+    }
+}
